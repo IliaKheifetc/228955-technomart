@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Kheifetc Ilia](https://up.htmlacademy.ru/htmlcss/14/user/228955).
-* Наставник: Виктор Капцов.
+* Наставник: [Виктор Капцов](https://up.htmlacademy.ru/htmlcss/14/user/34390).
 
 ---
 
