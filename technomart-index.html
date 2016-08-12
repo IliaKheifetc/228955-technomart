@@ -7,25 +7,19 @@
 	</head>
 	<body>
 		<header class="page-header">
-			<div class="header-color-wrapper1">
+			<div class="header-bgcolor-wrapper1">
 				<div class="layout-positioner">
 					<a class="page-header-logo">ТЕХНОМАРТ</a>
 					<form class="page-header-search" action="/search-results.html" method="GET">
-						<button type="submit">Искать</button>
+						<button class="icon-search" type="submit">Искать</button>
 						<input type="text" name="searchQuery" placeholder="Поиск:">
 					</form>
-					<div class="page-header-bookmarks">
-						<div class="header-icon icon-small icon-bookmark"></div>
-						<a class="btn btn-bookmarks">Закладки: <span class="bookmarks-number">0</span></a>
-					</div>
-					<div class="page-header-cart">
-						<div class="header-icon icon-small icon-cart"></div>
-						<a class="btn btn-cart">Корзина: <span class="cart-products-number">0</span></a>
-					</div>
+					<a class="btn btn-bookmarks icon-bookmark" href="#">Закладки: <span class="bookmarks-number">0</span></a>
+					<a class="btn btn-cart icon-cart" href="#">Корзина: <span class="cart-products-number">0</span></a>
 					<a class="btn btn-header-order" href="#">Оформить заказ</a>
 				</div>
 			</div>
-			<div class="header-color-wrapper2">
+			<div class="header-bgcolor-wrapper2">
 				<div class="layout-positioner">
 					<p class="page-header-description">
 						Интернет-магазин
@@ -33,8 +27,7 @@
 						и инструментов для ремонта
 					</p>
 					<div class="page-header-contacts">
-						<div class="page-header-phone">
-							<div class="header-icon icon-medium icon-phone"></div>
+						<div class="page-header-phone icon-phone">
 							<span>+7 (812) 555-05-55</span>
 						</div>
 						<p class="page-header-address">
@@ -42,10 +35,7 @@
 						</p>
 					</div>
 					<div class="page-header-authorization">
-						<div class="page-header-login">
-							<div class="header-icon icon-medium icon-login"></div>
-							<a class="btn btn-authorization" href="#">Войти</a>
-						</div>
+						<a class="btn btn-authorization icon-login" href="#">Войти</a>
 						<a class="btn btn-authorization" href="#">Регистрация</a>
 					</div>
 					<nav class="page-header-menu">
@@ -66,68 +56,86 @@
 			<section class="promo">
 				<div class="promo-block promo-block-new">
 					<b>Материалы</b>
-					<a class="btn btn-promo1" href="#">На любой вкус</a>
-					<div class="promo-block-icon"></div>
+					<a class="btn btn-promo" href="#">На любой вкус</a>
+					<div class="promo-block-pic"></div>
 				</div>
 				<div class="promo-block">
 					<b>Инструмент</b>
-					<a class="btn btn-promo2" href="#">НА ВСЕ СЛУЧАИ</a>
-					<div class="promo-block-icon"></div>
+					<a class="btn btn-promo" href="#">НА ВСЕ СЛУЧАИ</a>
+					<div class="promo-block-pic"></div>
 				</div>
 				<div class="promo-block">
 					<b>Техника</b>
-					<a class="btn btn-promo3" href="#">Для стройки</a>
-					<div class="promo-block-icon"></div>
+					<a class="btn btn-promo" href="#">Для стройки</a>
+					<div class="promo-block-pic"></div>
 				</div>
 				<div class="promo-slider">
-					<div class="promo-slider-perforator promo-slide-current">
-						<b class="promo-slider-title slider-title-large">Перфораторы</b>
-						<b class="promo-slider-title slider-title-small">Настроящие мужские игрушки</b>
+					<input type="radio" class="promo-to-slide1" name="promoSlider">
+					<input type="radio" class="promo-to-slide2" name="promoSlider">
+					<div class="promo-slider-wrapper">
+						<div class="promo-slider-perforator promo-slide-current">
+							<b class="promo-slider-title slider-title-large">Перфораторы</b>
+							<b class="promo-slider-title slider-title-small">Настроящие мужские игрушки</b>
+						</div>
+						<div class="promo-slider-drill">
+							<b class="promo-slider-title slider-title-large">Дрели</b>
+							<b class="promo-slider-title slider-title-small">Соседям на радость!</b>
+						</div>
 					</div>
-					<div class="promo-slider-drill">
-						<b class="promo-slider-title slider-title-large">Дрели</b>
-						<b class="promo-slider-title slider-title-small">Соседям на радость!</b>
-					</div>
-					<button class="promo-slider-switch switch-prev"></button>
-					<button class="promo-slider-switch switch-next"></button>
-					<a class="btn btn-catalog" href="#">Открыть каталог</a>
+					<a class="btn btn-main btn-catalog" href="#">Открыть каталог</a>
 				</div>
 				<div class="promo-block">
 					<b>Скидки 50%</b>
-					<a class="btn btn-promo4" href="#">На 350 ТОВАРОВ</a>
-					<div class="promo-block-icon"></div>
+					<a class="btn btn-promo" href="#">На 350 ТОВАРОВ</a>
+					<div class="promo-block-pic"></div>
 				</div>
 				<div class="promo-block">
 					<b>Доставка</b>
-					<a class="btn btn-promo5" href="#">Бесплатно</a>
-					<div class="promo-block-icon"></div>
+					<a class="btn btn-promo" href="#">Бесплатно</a>
+					<div class="promo-block-pic"></div>
 				</div>
 			</section>
 			<section class="products">
 				<header class="products-header">
 					<h2>Популярные товары:</h2>
-					<a class="btn btn-popular" href="#">Все популярные товары</a>
+					<a class="btn btn-main btn-popular" href="#">Все популярные товары</a>
 				</header>
 				<article class="products-product">
-					<a href="#"><img src="img/product1.jpeg" alt="Перфоратор BOSCH BFG 9000" width="100"  height="100"></a>
+					<img src="img/product1.jpeg" alt="Перфоратор BOSCH BFG 9000" width="100"  height="100">
+					<div class="products-product-buy">
+						<a class="btn btn-buy icon-cart js-btn-buy" href="#">КУПИТЬ</a>
+						<a class="btn btn-bookmark-product js-bookmark-product" href="#">В ЗАКЛАДКИ</a>
+					</div>
 					<h2><a class="products-product-name" href="#">Перфоратор BOSCH BFG 9000</a></h2>
 					<b class="products-product-price price-old">32500 Р.</b>
 					<a class="products-product-price price-new" href="#">25500 Р.</a>
 				</article>
 				<article class="products-product">
-					<a href="#"><img src="img/product2.jpeg" alt="Перфоратор BOSCH BFG 3000" width="100"  height="100"></a>
+					<img src="img/product2.jpeg" alt="Перфоратор BOSCH BFG 3000" width="100"  height="100">
+					<div class="products-product-buy">
+						<a class="btn btn-buy icon-cart js-btn-buy" href="#">КУПИТЬ</a>
+						<a class="btn btn-bookmark-product js-bookmark-product" href="#">В ЗАКЛАДКИ</a>
+					</div>
 					<h2><a class="products-product-name" href="#">Перфоратор BOSCH BFG 3000</a></h2>
 					<b class="products-product-price price-old">22500 Р.</b>
 					<a class="products-product-price price-new" href="#">15500 Р.</a>
 				</article>
 				<article class="products-product">
-					<a href="#"><img src="img/product3.jpeg" alt="Перфоратор BOSCH BFG 6000" width="100"  height="100"></a>
+					<img src="img/product3.jpeg" alt="Перфоратор BOSCH BFG 6000" width="100"  height="100">
+					<div class="products-product-buy">
+						<a class="btn btn-buy icon-cart js-btn-buy" href="#">КУПИТЬ</a>
+						<a class="btn btn-bookmark-product js-bookmark-product" href="#">В ЗАКЛАДКИ</a>
+					</div>
 					<h2><a class="products-product-name" href="#">Перфоратор BOSCH BFG 6000</a></h2>
 					<b class="products-product-price price-old">30500 Р.</b>
 					<a class="products-product-price price-new" href="#">25500 Р.</a>
 				</article>
 				<article class="products-product products-product-new">
-					<a href="#"><img src="img/product4.jpeg" alt="Перфоратор BOSCH BFG 2000" width="100"  height="100"></a>
+					<img src="img/product4.jpeg" alt="Перфоратор BOSCH BFG 2000" width="100"  height="100">
+					<div class="products-product-buy">
+ 						<a class="btn btn-buy icon-cart js-btn-buy" href="#">КУПИТЬ</a>
+ 						<a class="btn btn-bookmark-product js-bookmark-product" href="#">В ЗАКЛАДКИ</a>
+ 					</div>
 					<h2><a class="products-product-name" href="#">Перфоратор BOSCH BFG 2000</a></h2>
 					<b class="products-product-price price-old"></b>
 					<a class="products-product-price price-new" href="#">12500 Р.</a>
@@ -136,7 +144,7 @@
 			<section class="companies">
 				<header class="companies-header">
 					<h2>Популярные производители:</h2>
-					<a class="btn btn-popular" href="#">Все производители</a>
+					<a class="btn btn-main btn-popular" href="#">Все производители</a>
 				</header>
 				<div class="companies-company">
 					<a href="#"><img src="img/logo-bosch.jpeg" alt="BOSCH" width="220" height="144"></a>
@@ -171,31 +179,33 @@
 				</header>
 				<div class="services-slider">
 					<ul class="services-slider-switch">
-						<li><button class="js-btn-delivery slider-switch-current" type="button">Доставка</button></li>
-						<li><button class="js-btn-guarantee" type="button">Гарантия</button></li>
-						<li><button class="js-btn-credit" type="button">Кредит</button></li>
+						<li><label>Доставка<input type="radio" class="slide-to-delivery" name="servicesSlider" style="display: none;"></label></li>
+						<li><label>Гарантия<input type="radio" class="slide-to-guarantee" name="servicesSlider" style="display: none;"></label></li>
+						<li><label>Кредит<input type="radio" class="slide-to-credit" name="servicesSlider" style="display: none;"></label></li>
 					</ul>
-					<div class="services-slide services-slide-delivery services-slide-current">
-						<b>Доставка</b>
-						<p>
-							Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!
-						</p>
-					</div>
-					<div class="services-slide services-slide-guarantee">
-						<b>Гарантия</b>
-						<p>
-							Если купленный у нас товар поломается или заискрит,
-							а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.
-							Дом уж восстановите как-нибудь сами.
-						</p>
-					</div>
-					<div class="services-slide services-slide-credit">
-						<b>Кредит</b>
-						<p>
-							Залезть в долговую яму стало проще!
-							Кредитные консультанты придут вам на помощь.
-						</p>
-						<a class="btn btn-credit-apply" href="#">Отправить заявку</a>
+					<div class="services-slider-wrapper">
+						<div class="services-slide services-slide-delivery services-slide-current">
+							<b>Доставка</b>
+							<p>
+								Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!
+							</p>
+						</div>
+						<div class="services-slide services-slide-guarantee">
+							<b>Гарантия</b>
+							<p>
+								Если купленный у нас товар поломается или заискрит,
+								а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.
+								Дом уж восстановите как-нибудь сами.
+							</p>
+						</div>
+						<div class="services-slide services-slide-credit">
+							<b>Кредит</b>
+							<p>
+								Залезть в долговую яму стало проще!
+								Кредитные консультанты придут вам на помощь.
+							</p>
+							<a class="btn btn-main btn-credit-apply" href="#">Отправить заявку</a>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -215,7 +225,7 @@
 						<li>Автотрейдинг</li>
 						<li>ЖелДорЭкспедиция</li>
 					</ul>
-					<a class="btn btn-company-details" href="#">Подробнее о компании</a>
+					<a class="btn btn-main btn-company-details" href="#">Подробнее о компании</a>
 				</div>
 				<section class="info-contacts">
 					<h2>Контакты</h2>
@@ -224,7 +234,7 @@
 						заехав в наш офис:
 					</p>
 					<a href="#"><img class="info-contacts-map js-map" src="img/map.jpeg" alt="Карта" width="300" height="158"></a>
-					<a class="btn btn-you-lost js-btn-lost" href="#">Заблудились? Напишите нам!</a>
+					<a class="btn btn-main btn-you-lost js-btn-lost" href="#">Заблудились? Напишите нам!</a>
 				</section>
 			</section>
 		</main>
@@ -258,9 +268,9 @@
 						Все права защищены
 					</p>
 					<div class="page-footer-social">
-						<a class="social-vk" href="#">VK</a>
-						<a class="social-fb" href="#">FB</a>
-						<a class="social-inst" href="#">INST</a>
+						<a class="icon-vk" href="#">VK</a>
+						<a class="icon-facebook" href="#">FB</a>
+						<a class="icon-instagramm" href="#">INST</a>
 					</div>
 					<p class="page-footer-feedback">
 						Обратная связь:
