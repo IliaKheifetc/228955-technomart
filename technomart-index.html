@@ -7,40 +7,48 @@
 	</head>
 	<body>
 		<header class="page-header">
-			<div class="header-bgcolor-wrapper1">
+			<div class="header-bgcolor-wrapper-1">
 				<div class="layout-positioner">
 					<a class="page-header-logo">ТЕХНОМАРТ</a>
 					<form class="page-header-search" action="/search-results.html" method="GET">
 						<button class="icon-search" type="submit">Искать</button>
 						<input type="text" name="searchQuery" placeholder="Поиск:">
 					</form>
-					<a class="btn btn-bookmarks icon-bookmark" href="#">Закладки: <span class="bookmarks-number">0</span></a>
-					<a class="btn btn-cart icon-cart" href="#">Корзина: <span class="cart-products-number">0</span></a>
+					<a class="btn btn-bookmarks" href="#">Закладки: <span class="bookmarks-number">0</span></a>
+					<a class="btn btn-cart" href="#">Корзина: <span class="cart-products-number">0</span></a>
 					<a class="btn btn-header-order" href="#">Оформить заказ</a>
 				</div>
 			</div>
-			<div class="header-bgcolor-wrapper2">
+			<div class="header-bgcolor-wrapper-2">
 				<div class="layout-positioner">
-					<p class="page-header-description">
+					<h1 class="page-header-description">
 						Интернет-магазин
 						строительных материалов
 						и инструментов для ремонта
-					</p>
+					</h1>
 					<div class="page-header-contacts">
 						<div class="page-header-phone icon-phone">
-							<span>+7 (812) 555-05-55</span>
+							+7 (812) 555-05-55
 						</div>
 						<p class="page-header-address">
 							г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
 						</p>
 					</div>
-					<div class="page-header-authorization">
-						<a class="btn btn-authorization icon-login" href="#">Войти</a>
-						<a class="btn btn-authorization" href="#">Регистрация</a>
+					<div class="user-controls">
+						<div class="user-controls-unauthorized">
+							<a class="btn icon-login" href="#">Войти</a>
+							<a class="btn" href="#">Регистрация</a>
+						</div>
+						<div class="user-controls-authorized is-hidden">
+							<a class="btn icon-user" href="#">Равшан Джамшутович</a>
+							<a class="btn icon-logout" href="#"></a>
+							<a class="user-controls-orders" href="#">Мои заказы</a>
+							<a class="user-controls-account" href="#">Личный кабинет</a>
+						</div>
 					</div>
 					<nav class="page-header-menu">
 						<ul>
-							<li><a href="#">Главная</a></li>
+							<li><a class="page-header-menu-current">Главная</a></li>
 							<li><a href="#">Компания</a></li>
 							<li><a href="#">Каталог</a></li>
 							<li><a href="#">Новости</a></li>
@@ -54,24 +62,23 @@
 		</header>
 		<main>
 			<section class="promo">
-				<div class="promo-block promo-block-new">
+				<div class="promo-block promo-block-materials promo-block-new">
 					<b>Материалы</b>
 					<a class="btn btn-promo" href="#">На любой вкус</a>
-					<div class="promo-block-pic"></div>
 				</div>
-				<div class="promo-block">
+				<div class="promo-block promo-block-tools">
 					<b>Инструмент</b>
 					<a class="btn btn-promo" href="#">НА ВСЕ СЛУЧАИ</a>
-					<div class="promo-block-pic"></div>
 				</div>
-				<div class="promo-block">
+				<div class="promo-block promo-block-machines">
 					<b>Техника</b>
 					<a class="btn btn-promo" href="#">Для стройки</a>
-					<div class="promo-block-pic"></div>
 				</div>
 				<div class="promo-slider">
-					<input type="radio" class="promo-to-slide1" name="promoSlider">
-					<input type="radio" class="promo-to-slide2" name="promoSlider">
+					<input type="radio" class="promo-to-slide1" name="promoSlider" id="slidePerforator">
+					<input type="radio" class="promo-to-slide2" name="promoSlider" id="slideDrill">
+					<label class="promo-slider-switch switch-prev" for="slidePerforator"></label>
+					<label class="promo-slider-switch switch-next" for="slideDrill"></label>
 					<div class="promo-slider-wrapper">
 						<div class="promo-slider-perforator promo-slide-current">
 							<b class="promo-slider-title slider-title-large">Перфораторы</b>
@@ -82,23 +89,21 @@
 							<b class="promo-slider-title slider-title-small">Соседям на радость!</b>
 						</div>
 					</div>
-					<a class="btn btn-main btn-catalog" href="#">Открыть каталог</a>
+					<a class="btn btn-main" href="#">Открыть каталог</a>
 				</div>
-				<div class="promo-block">
+				<div class="promo-block promo-block-discounts">
 					<b>Скидки 50%</b>
 					<a class="btn btn-promo" href="#">На 350 ТОВАРОВ</a>
-					<div class="promo-block-pic"></div>
 				</div>
-				<div class="promo-block">
+				<div class="promo-block promo-block-delivery">
 					<b>Доставка</b>
 					<a class="btn btn-promo" href="#">Бесплатно</a>
-					<div class="promo-block-pic"></div>
 				</div>
 			</section>
 			<section class="products">
 				<header class="products-header">
 					<h2>Популярные товары:</h2>
-					<a class="btn btn-main btn-popular" href="#">Все популярные товары</a>
+					<a class="btn btn-main" href="#">Все популярные товары</a>
 				</header>
 				<article class="products-product">
 					<img src="img/product1.jpeg" alt="Перфоратор BOSCH BFG 9000" width="100"  height="100">
@@ -144,7 +149,7 @@
 			<section class="companies">
 				<header class="companies-header">
 					<h2>Популярные производители:</h2>
-					<a class="btn btn-main btn-popular" href="#">Все производители</a>
+					<a class="btn btn-main" href="#">Все производители</a>
 				</header>
 				<div class="companies-company">
 					<a href="#"><img src="img/logo-bosch.jpeg" alt="BOSCH" width="220" height="144"></a>
@@ -179,12 +184,15 @@
 				</header>
 				<div class="services-slider">
 					<ul class="services-slider-switch">
-						<li><label>Доставка<input type="radio" class="slide-to-delivery" name="servicesSlider" style="display: none;"></label></li>
-						<li><label>Гарантия<input type="radio" class="slide-to-guarantee" name="servicesSlider" style="display: none;"></label></li>
-						<li><label>Кредит<input type="radio" class="slide-to-credit" name="servicesSlider" style="display: none;"></label></li>
+						<li><label for="optionDelivery">Доставка</label></li>
+						<li><label for="optionGuarantee">Гарантия</label></li>
+						<li><label for="optionCredit">Кредит</label></li>
 					</ul>
+					<input type="radio" class="slide-to-delivery is-hidden" name="servicesSlider" id="optionDelivery">
+					<input type="radio" class="slide-to-guarantee is-hidden" name="servicesSlider" id="optionGuarantee">
+					<input type="radio" class="slide-to-credit is-hidden" name="servicesSlider" id="optionCredit">
 					<div class="services-slider-wrapper">
-						<div class="services-slide services-slide-delivery services-slide-current">
+						<div class="services-slide services-slide-delivery">
 							<b>Доставка</b>
 							<p>
 								Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!
@@ -204,7 +212,7 @@
 								Залезть в долговую яму стало проще!
 								Кредитные консультанты придут вам на помощь.
 							</p>
-							<a class="btn btn-main btn-credit-apply" href="#">Отправить заявку</a>
+							<a class="btn btn-main" href="#">Отправить заявку</a>
 						</div>
 					</div>
 				</div>
@@ -225,7 +233,7 @@
 						<li>Автотрейдинг</li>
 						<li>ЖелДорЭкспедиция</li>
 					</ul>
-					<a class="btn btn-main btn-company-details" href="#">Подробнее о компании</a>
+					<a class="btn btn-main" href="#">Подробнее о компании</a>
 				</div>
 				<section class="info-contacts">
 					<h2>Контакты</h2>
@@ -234,15 +242,15 @@
 						заехав в наш офис:
 					</p>
 					<a href="#"><img class="info-contacts-map js-map" src="img/map.jpeg" alt="Карта" width="300" height="158"></a>
-					<a class="btn btn-main btn-you-lost js-btn-lost" href="#">Заблудились? Напишите нам!</a>
+					<a class="btn btn-main js-btn-lost" href="#">Заблудились? Напишите нам!</a>
 				</section>
 			</section>
 		</main>
 		<footer class="page-footer">
-			<div class="footer-bgcolor-wrapper1">
+			<div class="footer-bgcolor-wrapper-1">
 				<div class="layout-positioner">
 					<a class="page-footer-logo">ТЕХНОМАРТ</a>
-					<ul class="page-footer-menu1">
+					<ul class="page-footer-menu-1">
 						<li><a href="#">Компания</a></li>
 						<li><a href="#">Новости</a></li>
 						<li><a href="#">Каталог</a></li>
@@ -253,7 +261,7 @@
 						г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
 						+7 (812) 555-05-55
 					</p>
-					<ul class="page-footer-menu2">
+					<ul class="page-footer-menu-2">
 						<li><a href="#">Материалы</a></li>
 						<li><a href="#">Техника</a></li>
 						<li><a href="#">Инструмент</a></li>
@@ -261,24 +269,27 @@
 					</ul>
 				</div>
 			</div>
-			<div class="footer-bgcolor-wrapper2">
+			<div class="footer-bgcolor-wrapper-2">
 				<div class="layout-positioner">
 					<p class="page-footer-copyrights">
 						© 2010–2016 Компания «Техномарт»<br>
 						Все права защищены
 					</p>
 					<div class="page-footer-social">
-						<a class="icon-vk" href="#">VK</a>
-						<a class="icon-facebook" href="#">FB</a>
-						<a class="icon-instagramm" href="#">INST</a>
+						<a class="social icon-vk" href="#">VK</a>
+						<a class="social icon-facebook" href="#">FB</a>
+						<a class="social icon-instagramm" href="#">INST</a>
 					</div>
 					<p class="page-footer-feedback">
 						Обратная связь:
-						<span class="page-footer-highlighted">mail@htmlacademy.ru</span>
+						<a href="mailto:mail@htmlacademy.ru?Subject=Feedback" title="Напишите нам отзыв">mail@htmlacademy.ru</a>
 					</p>
-					<p class="page-footer-developer">
-						Разработано — <a class="page-footer-highlighted" href="#"><span>htmlacademy.ru</span></a>
-					</p>
+					<div class="page-footer-developer">
+						Разработано —
+						<address>
+							<a href="#">htmlacademy.ru</a>
+						</address>
+					</div>
 				</div>
 			</div>
 		</footer>
