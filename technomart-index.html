@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Technomart - main page</title>
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -249,12 +250,13 @@
       <form action="#" method="post">
         <div class="modal-top">
           <button class="modal-close js-modal-close" type="button"></button>
-          <label for="nameField">Ваше имя:</label>
-          <label for="emailField">Ваш e-mail:</label>
-          <input type="text" name="name" id="nameField" placeholder="Представьтесь, пожалуйста">
-          <input type="text" name="email" id="emailField" placeholder="Для отправки ответа">
-          <label for="letterContentField">Текст письма:</label>
-          <textarea id="letterContentField">В свободной форме</textarea>
+          <div class="write-us-column-left">
+            <label>Ваше имя:<input type="text" name="name" placeholder="Представьтесь, пожалуйста"></label>
+          </div>
+          <div class="write-us-column-right">
+            <label>Ваш e-mail:<input type="text" name="email" placeholder="Для отправки ответа"></label>
+          </div>
+          <label >Текст письма:<textarea>В свободной форме</textarea></label>
         </div>
         <div class="modal-bottom">
           <button class="btn btn-main" type="submit">Отправить</button>

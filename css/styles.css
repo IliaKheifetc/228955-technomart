@@ -6,16 +6,18 @@ body {
     color: #000000;
 }
 
-.page-header-description {
+h1 {
     font-style: italic;
     font-size: 16px;
     line-height: 1.4375;
+    font-family: "Cuprum", "Arial", sans-serif;
     color: #ee3643;
 }
 
-.page-heading-1 {
+h2 {
     font-size: 30px;
     line-height: 1;
+    font-family: "Cuprum", "Arial", sans-serif;
     color: #32425c;
     text-transform: uppercase;
 }
