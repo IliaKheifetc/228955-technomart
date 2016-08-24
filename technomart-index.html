@@ -254,23 +254,6 @@
         </section>
       </section>
     </div>
-    <section class="write-us is-hidden">
-      <form action="#" method="post">
-        <div class="modal-top">
-          <button class="modal-close js-modal-close" type="button"></button>
-          <div class="write-us-column-left">
-            <label>Ваше имя:<input type="text" name="name" placeholder="Представьтесь, пожалуйста"></label>
-          </div>
-          <div class="write-us-column-right">
-            <label>Ваш e-mail:<input type="text" name="email" placeholder="Для отправки ответа"></label>
-          </div>
-          <label >Текст письма:<textarea>В свободной форме</textarea></label>
-        </div>
-        <div class="modal-bottom">
-          <button class="btn btn-main" type="submit">Отправить</button>
-        </div>
-      </form>
-    </section>
   </main>
   <footer class="page-footer">
     <div class="footer-bgcolor-wrapper-1">
@@ -319,5 +302,28 @@
       </div>
     </div>
   </footer>
+  <section class="write-us ">
+    <form action="#" method="post">
+      <div class="modal-top">
+        <button class="modal-close js-modal-close" type="button"></button>
+        <div class="modal-layout-positioner">
+          <div class="write-us-column-left">
+            <label>Ваше имя:<input type="text" name="name" placeholder="Представьтесь, пожалуйста"></label>
+          </div>
+          <div class="write-us-column-right">
+            <label>Ваш e-mail:<input type="text" name="email" placeholder="Для отправки ответа"></label>
+          </div>
+          <div class="write-us-letter">
+            <label>Текст письма:<textarea>В свободной форме</textarea></label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-bottom">
+        <div class="modal-layout-positioner">
+          <button class="btn btn-main" type="submit">Отправить</button>
+        </div>
+      </div>
+    </form>
+  </section>
 </body>
 </html>
