@@ -9,7 +9,7 @@
 <body>
   <header class="page-header">
     <div class="header-bgcolor-wrapper-1">
-      <div class="layout-positioner">
+      <div class="layout-positioner clearfix">
         <a class="page-header-logo" href="#">ТЕХНОМАРТ</a>
         <form class="page-header-search" action="#" method="GET">
           <button class="icon-search" type="submit" name="search-button">Искать</button>
@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="header-bgcolor-wrapper-2">
-      <div class="layout-positioner">
+      <div class="layout-positioner clearfix">
         <h1 class="page-header-description">
           Интернет-магазин
           строительных материалов
@@ -61,7 +61,7 @@
       </div>
     </div>
   </header>
-  <main>
+  <main class="catalog-content">
     <div class="layout-positioner">
       <ul class="breadcrumbs">
         <li><a class="breadcrumbs-link" href="#"></a></li>
@@ -69,9 +69,13 @@
         <li><a class="breadcrumbs-link" href="#">Инструмент</a></li>
         <li><a class="breadcrumbs-link breadcrumbs-current">Перфораторы</a></li>
       </ul>
-      <h2>ПЕРФОРАТОРЫ</h2>
+      <div class="catalog-content-heading">
+        <h2>ПЕРФОРАТОРЫ</h2>
+      </div>
       <section class="filter">
-        <b>Фильтр</b>
+        <div class="filter-heading">
+          Фильтр
+        </div>
         <form action="#" method="GET">
           <fieldset class="filter-price">
             <legend>Цена:</legend>
