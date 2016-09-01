@@ -25,7 +25,7 @@
       <div class="layout-positioner clearfix">
         <h1 class="page-header-description">
           Интернет-магазин
-          строительных материалов
+          строительных материалов<br>
           и инструментов для ремонта
         </h1>
         <div class="page-header-contacts">
@@ -78,12 +78,12 @@
           <a class="btn btn-promo" href="#">Для стройки</a>
         </div>
         <div class="promo-slider">
-          <input type="radio" class="promo-to-slide1" name="promoSlider" id="slidePerforator">
+          <input type="radio" class="promo-to-slide1" name="promoSlider" id="slidePerforator" checked>
           <input type="radio" class="promo-to-slide2" name="promoSlider" id="slideDrill">
           <label class="promo-slider-switch switch-prev" for="slidePerforator"></label>
           <label class="promo-slider-switch switch-next" for="slideDrill"></label>
           <div class="promo-slider-wrapper">
-            <div class="promo-slider-perforator promo-slide-current">
+            <div class="promo-slider-perforator">
               <b class="promo-slider-title slider-title-large">Перфораторы</b>
               <b class="promo-slider-title slider-title-small">Настроящие мужские игрушки</b>
             </div>
@@ -192,22 +192,23 @@
           </p>
         </header>
         <div class="services-slider clearfix">
+          <input type="radio" class="slide-to-delivery is-hidden" name="servicesSlider" id="optionDelivery" checked>
+          <input type="radio" class="slide-to-guarantee is-hidden" name="servicesSlider" id="optionGuarantee">
+          <input type="radio" class="slide-to-credit is-hidden" name="servicesSlider" id="optionCredit">
           <ul class="services-slider-switch">
             <li><label for="optionDelivery">Доставка</label></li>
             <li><label for="optionGuarantee">Гарантия</label></li>
             <li><label for="optionCredit">Кредит</label></li>
           </ul>
-          <input type="radio" class="slide-to-delivery is-hidden" name="servicesSlider" id="optionDelivery">
-          <input type="radio" class="slide-to-guarantee is-hidden" name="servicesSlider" id="optionGuarantee">
-          <input type="radio" class="slide-to-credit is-hidden" name="servicesSlider" id="optionCredit">
           <div class="services-slider-wrapper">
-            <div class="services-slide services-slide-delivery is-hidden">
+            <div class="services-slide services-slide-delivery">
               <b>Доставка</b>
               <p>
-                Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!
+                Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,<br>
+                поднимая его на ваш этаж!
               </p>
             </div>
-            <div class="services-slide services-slide-guarantee is-hidden">
+            <div class="services-slide services-slide-guarantee">
               <b>Гарантия</b>
               <p>
                 Если купленный у нас товар поломается или заискрит,
@@ -254,7 +255,7 @@
             Вы можете забрать товар сами,
             заехав в наш офис:
           </p>
-          <a href="https://www.google.ru/maps/place/Bolshaya+Konyushennaya+ul.,+19,+Sankt-Peterburg,+191186/@59.9387458,30.321651,17z/data=!4m5!3m4!1s0x4696310fca5ba729:0xea9c53d4493c879f!8m2!3d59.9387942!4d30.3230833?hl=en"><img class="info-contacts-map js-map" src="img/img-map.jpg" alt="Карта" width="300" height="158"></a>
+          <a href="https://www.google.ru/maps/place/Bolshaya+Konyushennaya+ul.,+19,+Sankt-Peterburg,+191186/@59.9387458,30.321651,17z/data=!4m5!3m4!1s0x4696310fca5ba729:0xea9c53d4493c879f!8m2!3d59.9387942!4d30.3230833?hl=en" target="_blank"><img class="info-contacts-map js-map" src="img/img-map.jpg" alt="Карта" width="300" height="158"></a>
           <a class="btn btn-main js-btn-lost" href="#">Заблудились? Напишите нам!</a>
         </section>
       </section>
