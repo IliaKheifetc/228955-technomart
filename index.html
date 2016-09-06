@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no"/>
   <title>Technomart - main page</title>
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&subset=cyrillic" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
@@ -9,7 +10,6 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="modal-overlay js-modal-overlay is-hidden"></div>
   <header class="page-header">
     <div class="header-bgcolor-wrapper-1">
       <div class="layout-positioner clearfix">
@@ -54,7 +54,7 @@
           <ul>
             <li><a class="page-header-menu-current">Главная</a></li>
             <li><a href="#">Компания</a></li>
-            <li><a href="#">Каталог</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
             <li><a href="#">Новости</a></li>
             <li><a href="#">Спецпредложения</a></li>
             <li><a href="#">Доставка</a></li>
@@ -259,7 +259,7 @@
             Вы можете забрать товар сами,
             заехав в наш офис:
           </p>
-          <a class="info-contacts-map js-map" href="https://www.google.ru/maps/place/Bolshaya+Konyushennaya+ul.,+19,+Sankt-Peterburg,+191186/@59.9387458,30.321651,17z/data=!4m5!3m4!1s0x4696310fca5ba729:0xea9c53d4493c879f!8m2!3d59.9387942!4d30.3230833?hl=en" target="_blank"><img src="img/img-map.jpg" alt="Карта" width="300" height="158"></a>
+          <a class="info-contacts-map js-btn-map" href="https://www.google.ru/maps/place/Bolshaya+Konyushennaya+ul.,+19,+Sankt-Peterburg,+191186/@59.9387458,30.321651,17z/data=!4m5!3m4!1s0x4696310fca5ba729:0xea9c53d4493c879f!8m2!3d59.9387942!4d30.3230833?hl=en" target="_blank"><img src="img/img-map.jpg" alt="Карта" width="300" height="158"></a>
           <a class="btn btn-main js-btn-lost" href="#">Заблудились? Напишите нам!</a>
         </section>
       </section>
@@ -318,7 +318,7 @@
         <button class="modal-close js-modal-close" type="button"></button>
         <div class="modal-layout-positioner">
           <div class="write-us-column-left">
-            <label>Ваше имя:<input type="text" name="name" placeholder="Представьтесь, пожалуйста"></label>
+            <label>Ваше имя:<input type="text" name="userName" placeholder="Представьтесь, пожалуйста"></label>
           </div>
           <div class="write-us-column-right">
             <label>Ваш e-mail:<input type="text" name="email" placeholder="Для отправки ответа"></label>
@@ -335,7 +335,12 @@
       </div>
     </form>
   </section>
-
-  <script src="js/script-main.js"></script>
+  <section class="modal-map js-modal-map is-hidden" id="map">
+    <button class="modal-close js-map-close" type="button"></button>
+    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2142.0256834187294!2d30.31675139572023!3d59.939098499499934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sru!4v1473200170034&center=59.939,30.316" width="940" height="466" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.597484844189!2d30.3167479208456!3d59.938821053479536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2sru!4v1473201009461&center=59.939,30.316" width="940" height="466" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </section>
+  <div class="modal-overlay js-modal-overlay is-hidden"></div>
+  <script src="js/script-main.min.js"></script>
 </body>
 </html>

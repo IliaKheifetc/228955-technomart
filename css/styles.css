@@ -769,6 +769,7 @@ main .btn,
     padding-left: 24px;
     padding-top: 26px;
     height: 266px;
+    background-color: #8b7f71;
 }
 
 .promo-slider-perforator {
@@ -1511,8 +1512,9 @@ main .btn,
     position: relative;
 }
 
-.write-us .modal-close,
-.added-to-cart .modal-close {
+/*.write-us .modal-close,*/
+/*.added-to-cart .modal-close {*/
+.modal-close {
     position: absolute;
     top: 14px;
     right: 5px;
@@ -1523,11 +1525,13 @@ main .btn,
     border: none;
     outline: none;
     background-color: transparent;
+    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
-.write-us .modal-close::before,
-.added-to-cart .modal-close::before {
+/*.write-us .modal-close::before,*/
+/*.added-to-cart .modal-close::before {*/
+.modal-close::before {
     content: "";
     position: relative;
     display: block;
@@ -1536,8 +1540,9 @@ main .btn,
     background-color: #ee3643;
 }
 
-.write-us .modal-close::after,
-.added-to-cart .modal-close::after {
+/*.write-us .modal-close::after,*/
+/*.added-to-cart .modal-close::after {*/
+.modal-close::after {
     content: "";
     position: relative;
     top: -5px;
@@ -1545,6 +1550,7 @@ main .btn,
     width: 27px;
     height: 5px;
     background-color: #ee3643;
+    -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
 }
 
@@ -2317,6 +2323,7 @@ main .btn,
     line-height: 74px;
     font-family: "PT Sans", "Arial", sans-serif;
     text-align: center;
+    -webkit-transform: rotate(-135deg);
     transform: rotate(-135deg);
     background-color: #63a63e;
     border-radius: 50%;
@@ -2381,6 +2388,7 @@ main .btn,
     line-height: 40px;
     font-family: "PT Sans", "Arial", sans-serif;
     color: #ffffff;
+    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
@@ -2416,4 +2424,18 @@ main .btn,
     z-index: 90;
     height: 3151px;
     background-color: rgba(0, 0, 0, 0.35);
+}
+
+
+.modal-map {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    width: 940px;
+    height: 446px;
+    margin-top: -223px;
+    margin-left: -470px;
+    background-color: #cadfaa;
+    box-shadow: 0 0 14.72px 1.28px rgba(35, 31, 32, 0.5);
 }
