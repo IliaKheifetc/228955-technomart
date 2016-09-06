@@ -5,6 +5,7 @@
   <title>Technomart - catalog page</title>
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&subset=cyrillic" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -81,8 +82,12 @@
           <fieldset class="filter-price">
             <legend>Цена:</legend>
             <div class="filter-price-range">
-              <input type="range" name="minPrice" min="0" max="30000" step="10" value="0">
-              <input class="is-hidden" type="range" name="maxPrice" min="10" max="30000" step="10" value="30000">
+              <!-- <input type="range" name="minPrice" min="0" max="30000" step="10" value="10" /> -->
+              <!-- <input class="is-hidden" type="range" name="maxPrice" min="10" max="30000" step="10" value="30000"> -->
+              <div class="price-range-track"></div>
+              <div class="price-range-track2"></div>
+              <div class="price-range-thumb"></div>
+              <div class="price-range-thumb"></div>
             </div>
             <output name="outputMinPrice">0</output>
             <output name="outputMaxPrice">30000</output>
@@ -283,5 +288,7 @@
       </div>
     </div>
   </section>
+  <div class="modal-overlay js-modal-overlay is-hidden"></div>
+  <script src="js/script-catalog.js"></script>
 </body>
 </html>

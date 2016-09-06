@@ -7,23 +7,14 @@
     url("../fonts/symbols-technomart.woff2") format("woff2");
 }
 
-article,
-section,
-main,
-header,
-footer {
-    display: block;
-}
-
 body {
-    margin: 0;
     padding: 0;
     font-weight: 400;
     font-size: 13px;
     line-height: 1.06;
     font-family: "Cuprum", "Arial", sans-serif;
     color: #000000;
-    /*background-image: url("../../Technomart-design_guarantee.jpg");*/
+    /*background-image: url("../../Technomart-catalog.jpg");*/
     background-position: 50% 0;
 }
 
@@ -93,8 +84,11 @@ h2 {
     text-transform: uppercase;
 }
 
-p {
-    margin: 0;
+.page-header p,
+.page-footer p,
+.services-slide > p {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .page-header-logo {
@@ -399,7 +393,7 @@ p {
     position: relative;
     width: 121px;
     padding-left: 48px;
-    text-align: initial;
+    text-align: left;
 }
 
 .user-controls-unauthorized .btn:first-child::before {
@@ -782,48 +776,73 @@ main .btn,
     background-image: url("../img/bg-drilling-man.jpg");
 }
 
-
 .promo-to-slide1,
 .promo-to-slide2 {
+    display: none;
     position: absolute;
-    visility: hidden;
     bottom: 33px;
     left: 292px;
     width: 11px;
     height: 11px;
     border: none;
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
 }
 
-.promo-to-slide1::before,
+/*.promo-to-slide1::before,
 .promo-to-slide2::before {
     content: "";
+    position: relative;
     display: block;
     width: 11px;
     height: 11px;
     background-color: white;
     border-radius: 50%;
-}
+}*/
 
-.promo-to-slide1:checked::before,
+/*.promo-to-slide1:checked::before,
 .promo-to-slide2:checked::before {
     background-color: red;
     border-radius: 50%;
     box-shadow: inset 0 0 0 2px #ffffff;
-}
+}*/
 
-.promo-to-slide2 {
+/*.promo-to-slide2 {
     left: 312px;
-}
+}*/
 
-.promo-to-slide1:checked,
+/*.promo-to-slide1:checked,
 .promo-to-slide2:checked {
     outline: none;
-}
+}*/
 
-.promo-to-slide1:active,
+/*.promo-to-slide1:active,
 .promo-to-slide2:active {
     outline: none;
+}*/
+
+.cross-browser-radio-1,
+.cross-browser-radio-2 {
+    position: absolute;
+    left: 295px;
+    bottom: 36px;
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+.cross-browser-radio-2 {
+    left: 315px;
+}
+
+.promo-to-slide1:checked ~ .cross-browser-radio-1 {
+    background-color: rgb(255, 0, 0);
+    box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+.promo-to-slide2:checked ~ .cross-browser-radio-2 {
+    background-color: rgb(255, 0, 0);
+    box-shadow: inset 0 0 0 2px #ffffff;
 }
 
 .promo-slider-wrapper {
@@ -900,15 +919,17 @@ main .btn,
 .products-product-buy {
     box-sizing: border-box;
     width: 135px;
-    height: 126px;
+    height: 125px;
     margin: 0 auto;
-    margin-bottom: 45px;
-    padding-top: 45px;
+    margin-bottom: 46px;
+    padding-top: 44px;
 }
 
 .products-product-buy .btn-buy {
     position: relative;
     margin-bottom: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: #63a63e;
     box-shadow: inset 0 -3px 0 0 #367315;
 }
@@ -943,17 +964,23 @@ main .btn,
 }
 
 .products-product-buy .btn-bookmark-product {
+    box-sizing: border-box;
+    padding-top: 8px;
+    padding-bottom: 6px;
     color: #32425c;
     background-color: #ffffff;
-    box-shadow: inset 0 0 0 3px #63a63e;
+    /*box-shadow: inset 0 0 0 3px #63a63e;*/
+    border: 3px solid #63a63e;
 }
 
 .products-product-buy .btn-bookmark-product:hover {
-    box-shadow: inset 0 0 0 3px #32425c;
+    /*box-shadow: inset 0 0 0 3px #32425c;*/
+    border: 3px solid #32425c;
 }
 
 .products-product-buy .btn-bookmark-product:active {
-    box-shadow: inset 0 0 0 3px #32425c;
+    /*box-shadow: inset 0 0 0 3px #32425c;*/
+    border: 3px solid #32425c;
     opacity: 0.3;
 }
 
@@ -1241,7 +1268,7 @@ main .btn,
     }
 }
 
-.services-slide b {
+.services-slide > b {
     display: inline-block;
     margin-top: 7px;
     margin-bottom: 31px;
@@ -1250,6 +1277,7 @@ main .btn,
     line-height: 24px;
     color: #32425c;
     text-transform: uppercase;
+    letter-spacing: 0.006em;
     vertical-align: top;
 }
 
@@ -1312,17 +1340,17 @@ main .btn,
     font-size: 13px;
     line-height: 24px;
     font-family: "PT Sans", "Arial", sans-serif;
-    font-kerning: auto;
-    letter-spacing: 0.0098em;
 }
 
-.info-about-company p {
+.info-about-company > p {
     margin-bottom: 24px;
+    letter-spacing: 0.0085em;
 }
 
-.info-about-company p:last-of-type {
+.info-about-company > p:last-of-type {
     width: 400px;
     margin-bottom: 21px;
+    letter-spacing: 0.003em;
 }
 
 .info-transport-companies {
@@ -1360,15 +1388,17 @@ main .btn,
     min-height: 374px;
 }
 
-.info-contacts h2 {
+.info-contacts > h2 {
     margin-bottom: 26px;
 }
 
-.info-contacts p {
+.info-contacts > p {
     width: 190px;
     margin-bottom: 31px;
+    letter-spacing: 0em;
 }
 .info-contacts-map {
+    display: block;
     margin-bottom: 38px;
 }
 
@@ -1380,6 +1410,7 @@ main .btn,
     position: fixed;
     top: 50%;
     left: 50%;
+    z-index: 100;
     width: 620px;
     height: 430px;
     margin-left: -310px;
@@ -1395,14 +1426,15 @@ main .btn,
     /*position: relative;*/
     padding-top: 54px;
     padding-bottom: 37px;
-    /*opacity: 0.6;*/
     background-color: #ffffff;
     box-shadow: inset 0 7px 0 0 #ee3643;
+    /*opacity: 0.5;*/
 }
 
 .write-us-column-left > label,
 .write-us-column-right > label,
 .write-us-letter > label {
+    padding-left: 1px;
     font-size: 18px;
     line-height: 18px;
     font-family: "Cuprum", "Arial", sans-serif;
@@ -1414,13 +1446,11 @@ main .btn,
     width: 100%;
     height: 38px;
     margin-top: 9px;
-    padding-top: 6px;
     padding-left: 14px;
     font-size: 13px;
     line-height: 18px;
     font-family: "PT Sans", "Arial", sans-serif;
-    color: #font-size: 13px;
-    line-height: #999999;
+    color: #999999;
 }
 
 .modal-layout-positioner {
@@ -1471,6 +1501,7 @@ main .btn,
     padding-top: 35px;
     padding-bottom: 37px;
     background-color: #f1f1f1;
+    /*opacity: 0.5;*/
 }
 
 .write-us form {
@@ -1480,34 +1511,38 @@ main .btn,
 .write-us .modal-close,
 .added-to-cart .modal-close {
     position: absolute;
-    top: 22px;
-    right: 0px;
-    outline: none;
+    top: 14px;
+    right: 5px;
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    padding: 0;
     border: none;
+    outline: none;
     background-color: transparent;
+    transform: rotate(45deg);
 }
 
 .write-us .modal-close::before,
 .added-to-cart .modal-close::before {
     content: "";
-    /*position: absolute;*/
+    position: relative;
     display: block;
     width: 27px;
     height: 5px;
     background-color: #ee3643;
-    transform: rotate(45deg);
 }
 
 .write-us .modal-close::after,
 .added-to-cart .modal-close::after {
     content: "";
-    /*position: absolute;*/
+    position: relative;
+    top: -5px;
     display: block;
     width: 27px;
     height: 5px;
-    margin-top: -5px;
     background-color: #ee3643;
-    transform: rotate(-45deg);
+    transform: rotate(90deg);
 }
 
 .page-footer {
@@ -1957,6 +1992,7 @@ main .btn,
 }
 
 .filter-price-range {
+    position: relative;
     box-sizing: border-box;
     /*width: 182px;*/
     height: 80px;
@@ -1969,6 +2005,46 @@ main .btn,
 .filter-price-range > input[type="range"] {
     width: 182px;
     margin: 0 auto;
+}
+
+.price-range-track {
+    position: absolute;
+    top: 39px;
+    bottom: 39px;
+    width: 180px;
+    height: 2px;
+    background-color: #00ca74;
+}
+
+.price-range-track2 {
+    position: absolute;
+    top: 39px;
+    right: 20px;
+    bottom: 39px;
+    width: 20px;
+    height: 2px;
+    background-color: #d7dcde;
+}
+
+.price-range-thumb {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ababab;
+    box-shadow: inset 0 0 0 8px #ffffff,
+                0 2px 2px 0px #d6d3cd;
+    cursor: pointer;
+}
+
+.price-range-thumb:nth-child(2){
+    top: 30px;
+    left: 20px;
+}
+
+.price-range-thumb:nth-child(3) {
+    top: 30px;
+    right: 40px;
 }
 
 .filter-price output {
@@ -2037,6 +2113,10 @@ main .btn,
     color: #c1c1c1;
 }
 
+.filter label:hover {
+    cursor: pointer;
+}
+
 .filter-manufacturer > label:hover::before {
     color: #b5b5b5;
 }
@@ -2052,7 +2132,7 @@ main .btn,
 
 .filter .filter-power {
     box-sizing: border-box;
-    min-height: 180px;
+    min-height: 181px;
     margin-top: 17px;
 }
 
@@ -2093,9 +2173,8 @@ main .btn,
     box-sizing: border-box;
     width: 140px;
     height: 38px;
+    padding-top: 4px;
     border: 1px solid #e5e5e5;
-    padding-top: 6px;
-    /*padding-left: 38px;*/
     font-size: 13px;
     line-height: 18px;
     font-family: "PT Sans", "Arial", sans-serif;
@@ -2126,7 +2205,7 @@ main .btn,
     width: 38px;
     height: 38px;
     margin-right: 10px;
-    padding-top: 10px;
+    padding-top: 9px;
     border: 1px solid #e5e5e5;
     font-size: 13px;
     font-family: "PT Sans", "Arial", sans-serif;
@@ -2172,6 +2251,8 @@ main .btn,
 }
 
 .perforators p {
+    margin-top: 0;
+    margin-bottom: 0;
     font-size: 13px;
     font-family: "PT Sans", "Arial", sans-serif;
     letter-spacing: 0.002em;
@@ -2181,10 +2262,17 @@ main .btn,
     letter-spacing: 0.011em;
 }
 
+@-moz-document url-prefix() {
+    .perforators p > span {
+        letter-spacing: 0.01em;
+    }
+}
+
 .added-to-cart {
     position: fixed;
     top: 50%;
     left: 50%;
+    z-index: 100;
     margin-top: -141px;
     margin-left: -310px;
     width: 620px;
@@ -2242,8 +2330,8 @@ main .btn,
 
 .added-to-cart .modal-close {
     position: absolute;
-    top: 22px;
-    right: 0px;
+    top: 15px;
+    right: 5px;
 }
 
 .modal-close:hover {
@@ -2293,6 +2381,36 @@ main .btn,
     transform: rotate(45deg);
 }
 
+.tag-new::after {
+    -moz-transform: rotate(45deg) perspective(999px);
+}
+
 .page-header .cart-not-empty {
     background-color: #ee3643;
+}
+
+.page-header {
+    position: relative;
+    z-index: 10;
+}
+
+.index-content {
+    position: relative;
+    z-index: 10;
+}
+
+.page-footer {
+    position: relative;
+    z-index: 10;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*right: 0;*/
+    z-index: 90;
+    height: 3151px;
+    background-color: rgba(0, 0, 0, 0.35);
 }
