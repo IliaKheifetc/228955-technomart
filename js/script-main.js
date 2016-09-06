@@ -1,0 +1,70 @@
+var userLostButton = document.querySelector(".js-btn-lost"),
+    writeUsForm = document.querySelector(".write-us"),
+    overlay = document.querySelector(".js-modal-overlay"),
+    formCloseButton = writeUsForm.querySelector(".js-modal-close"),
+    userName = writeUsForm.querySelector("[name='userName']"),
+    mapButton = document.querySelector(".js-btn-map"),
+    modalMap = document.querySelector(".js-modal-map"),
+    mapCloseButton = document.querySelector(".js-map-close");
+
+
+var hideFormAndOverlay = function(event) {
+    event.preventDefault();
+
+    console.log(this);
+
+    writeUsForm.classList.add("is-hidden");
+    overlay.classList.add("is-hidden");
+}
+
+var hideMap = function(event) {
+    event.preventDefault();
+
+    if (!modalMap.classList.contains("is-hidden")) {
+        modalMap.classList.add("is-hidden");
+        overlay.classList.add("is-hidden");
+    }
+};
+
+userLostButton.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    if (writeUsForm.classList.contains("is-hidden")) {
+        writeUsForm.classList.remove("is-hidden");
+        overlay.classList.remove("is-hidden");
+        userName.focus();
+    }
+});
+
+
+formCloseButton.addEventListener("click", hideFormAndOverlay);
+
+overlay.addEventListener("click", function(event) {
+    if (!writeUsForm.classList.contains("is-hidden")) {
+        hideFormAndOverlay(event);
+    }
+    if (!modalMap.classList.contains("is-hidden")) {
+        hideMap(event);
+    }
+});
+
+window.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        event.preventDefault();
+        if (!overlay.classList.contains("is-hidden")) {
+            writeUsForm.classList.add("is-hidden");
+            overlay.classList.add("is-hidden");
+        }
+    }
+});
+
+mapButton.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    if (modalMap.classList.contains("is-hidden")) {
+        modalMap.classList.remove("is-hidden");
+        overlay.classList.remove("is-hidden");
+    }
+});
+
+mapCloseButton.addEventListener("click", hideMap);
