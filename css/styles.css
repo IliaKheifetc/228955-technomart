@@ -565,8 +565,11 @@ h2 {
     box-shadow: none;
 }
 
-.is-hidden {
-    display: none !important;
+.page-header .is-hidden,
+.index-content .is-hidden,
+.catalog-content .is-hidden,
+body .is-hidden {
+    display: none;
 }
 
 main .btn,
