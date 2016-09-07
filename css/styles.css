@@ -2439,3 +2439,7 @@ main .btn,
     background-color: #cadfaa;
     box-shadow: 0 0 14.72px 1.28px rgba(35, 31, 32, 0.5);
 }
+
+.modal-map > iframe {
+    border: 0px;
+}
