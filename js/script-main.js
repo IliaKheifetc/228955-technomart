@@ -11,9 +11,8 @@ var userLostButton = document.querySelector(".js-btn-lost"),
 var hideFormAndOverlay = function(event) {
     event.preventDefault();
 
-    console.log(this);
-
     writeUsForm.classList.add("is-hidden");
+    writeUsForm.classList.remove("modal-slide-right");
     overlay.classList.add("is-hidden");
 }
 
@@ -22,6 +21,7 @@ var hideMap = function(event) {
 
     if (!modalMap.classList.contains("is-hidden")) {
         modalMap.classList.add("is-hidden");
+        modalMap.classList.remove("modal-slide-down");
         overlay.classList.add("is-hidden");
     }
 };
@@ -31,6 +31,9 @@ userLostButton.addEventListener("click", function(event) {
 
     if (writeUsForm.classList.contains("is-hidden")) {
         writeUsForm.classList.remove("is-hidden");
+
+        writeUsForm.classList.add("modal-slide-right");
+
         overlay.classList.remove("is-hidden");
         userName.focus();
     }
@@ -53,6 +56,7 @@ window.addEventListener("keydown", function(event) {
         event.preventDefault();
         if (!overlay.classList.contains("is-hidden")) {
             writeUsForm.classList.add("is-hidden");
+            writeUsForm.classList.remove("modal-slide-right");
             overlay.classList.add("is-hidden");
         }
     }
@@ -63,6 +67,7 @@ mapButton.addEventListener("click", function(event) {
 
     if (modalMap.classList.contains("is-hidden")) {
         modalMap.classList.remove("is-hidden");
+        modalMap.classList.add("modal-slide-down");
         overlay.classList.remove("is-hidden");
     }
 });
