@@ -9,6 +9,7 @@ var showFormAndOverlay =  function(event) {
 
     if (addedToCartForm.classList.contains("is-hidden")) {
         addedToCartForm.classList.remove("is-hidden");
+        addedToCartForm.classList.add("modal-slide-right");
         overlay.classList.remove("is-hidden");
 
         incrementProductsNumber();
@@ -19,6 +20,7 @@ var hideFormAndOverlay = function(event) {
     event.preventDefault();
 
     addedToCartForm.classList.add("is-hidden");
+    addedToCartForm.classList.remove("modal-slide-right");
     overlay.classList.add("is-hidden");
 };
 
@@ -40,6 +42,7 @@ window.addEventListener("keydown", function(event) {
     if (event.key === "Escape") {
         if (!addedToCartForm.classList.contains("is-hidden")) {
             addedToCartForm.classList.add("is-hidden");
+            addedToCartForm.classList.remove("modal-slide-right");
             overlay.classList.add("is-hidden");
         }
     }
