@@ -14,7 +14,7 @@ body {
     line-height: 1.06;
     font-family: "Cuprum", "Arial", sans-serif;
     color: #000000;
-    /*background-image: url("../../Technomart-catalog.jpg");*/
+    /*background-image: url("../../Technomart-design.jpg");*/
     background-position: 50% 0;
 }
 
@@ -1104,37 +1104,14 @@ main .btn,
     /*padding-left: 1000px;*/
     /*padding-right: 1000px;*/
     border: 1px solid #e5e5e5;
-    font-size: 14px;
+    font-size: 0px;
     line-height: 145px;
     text-align: center;
     vertical-align: top;
 }
 
-.companies-company img {
-    vertical-align: middle;
-    /*position: absolute;*/
-    /*top: 50%;*/
-    /*left: 50%;*/
-}
-
 .companies-company:nth-of-type(4n) {
     margin-right: 0;
-}
-
-.companies-company [src*="makita"],
-.companies-company [src*="dewalt"] {
-    vertical-align: baseline;
-    padding-top: 48px;
-}
-
-.companies-company [src*="metabo"] {
-    vertical-align: baseline;
-    padding-top: 40px;
-}
-
-.companies-company [src*="aeg"] {
-    vertical-align: baseline;
-    padding-top: 35px;
 }
 
 .companies-company:hover {
@@ -2461,9 +2438,18 @@ main .btn,
 }
 
 .modal-slide-right {
-    animation: slideright 0.3s;
+    -webkit-animation: slideright 0.3s;
+            animation: slideright 0.3s;
 }
 
 .modal-slide-down {
-    animation: slidedown 0.7s;
+    -webkit-animation: slidedown 0.7s;
+            animation: slidedown 0.7s;
+}
+
+.companies-company > img {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    vertical-align: top;
 }
